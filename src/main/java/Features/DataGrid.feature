@@ -1,8 +1,6 @@
 @FireFoxBrowserDatagridTest
 Feature: QBE user flow DataGrid Test
 #Reading the data from the Data Grid
-
-
 Scenario Outline:
 Given that this is a DataGrid Test the console will show this 
 Then the user will open the browser again and go the qbe homepage
@@ -18,6 +16,11 @@ Given the user has done these steps the user should be able to click on finish f
 Examples:
 |	Year 				| Make 				| Shape 	|	Usage 				|PostCode					|
 |	2016				| Ford				|	SED		|	BUSG				| 2007-BROADWAY				|
-|	2012				| Ford				|	SED		|	PPG					| 2008-DARLINGTON			|
-|	2011				| Ford				|	SED		|	PRIV				| 2007-BROADWAY				|
-|	2013				| Ford				|	SED		|	BUSG				| 2007-BROADWAY				|	
+|	2012				| Holden			|	SED		|	PPG					| 2008-DARLINGTON			|
+|	2011				| Mazda				|	WAG		|	PRIV				| 2007-BROADWAY				|
+|	2013				| Aec				|	SED		| 	PPG					| 2009-PYRMONT				|	
+|	2004				| Nissan			|	WAG		|	PRIV				| 2007-ULTIMO				|
+|	2008				| Toyota			|	SED		|	PPG					| 2010-SURRY HILLS			|
+
+
+

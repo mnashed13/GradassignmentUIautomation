@@ -34,19 +34,9 @@ public class DataGridSteps {
 		System.out.println("This is a data grid test");
 	}
 	@Then("^the user will open the browser again and go the qbe homepage$")
-	public void BrowserOpen() throws Throwable{
-//		Chrome Browser Support
-//		System.out.println("Browser has opened ");
-//		System.out.println("The Test has started");
-//		System.setProperty("webdriver.chrome.driver","C:\\New folder\\Selenium Web Driver\\chromedriver_win32\\chromedriver.exe");					     
-//		driver = new ChromeDriver();
-//		System.out.println("Chrome browser has started");
-//		driver.get("https://www.qbe.com/au");
-		
-//		-------------------------------------------------------------------------------------------------------------
-		
+	public void BrowserOpen() throws Throwable{		
 //		FireFox Browser Support
-		System.setProperty("webdriver.gecko.driver", "C:\\New folder\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", "geckodriver.exe");
 		driver = new FirefoxDriver();
 		System.out.println("Firefox browser has started");
 		driver.get("https://www.qbe.com/au");
@@ -122,16 +112,7 @@ public class DataGridSteps {
 		System.out.println("This test worked");
 		
 	}
-//	
-//	@Then("^the user should input all the nessary details in the details Screen which include \"(.*)\",\"(.*)\",\"(.*)\",\"(.*)\", \"(.*)\" and click Continue$")
-//	public void PersonalDetailScreenDataGrid(String Type,String Duration, String Tax,String DOB, String Age) throws Throwable{
-//		DetailPageTestDataGridTest Detailinputbuttonclick = PageFactory.initElements(driver,DetailPageTestDataGridTest.class);
-//		Detailinputbuttonclick.PersonalDetailFormInputs(Type,Duration,Tax,DOB,Age);
-//		Detailinputbuttonclick.isElementPresent1();
-//		System.out.println("All elements have been verfied");
-//		System.out.println("This test worked");
-//		
-//	}
+
 	
 	@Given("^the user has done these steps the user should be able to click on finish for the datagrid test$")
 	public void FinishdataGridtest() throws Throwable{
@@ -139,8 +120,8 @@ public class DataGridSteps {
 		FinishGreenSlipQuote FinishButtonClick = PageFactory.initElements(driver,FinishGreenSlipQuote.class);
 		FinishButtonClick.FinishButtonWordpress();
 		FinishButtonClick.FinalQuoteCheck();
-		System.out.println("This test worked");
-		driver.close();
+//		System.out.println("This test worked");
+////		driver.close();
 		
 	}
 	

@@ -31,7 +31,7 @@ public class StepDefinitionExcelData {
 	public void BrowserOpenExcelSheetTest() throws Throwable{
 		System.out.println("Browser has opened ");
 		System.out.println("The Test has started");
-		System.setProperty("webdriver.chrome.driver","C:\\New folder\\Selenium Web Driver\\chromedriver_win32\\chromedriver.exe");					     
+		System.setProperty("webdriver.chrome.driver","chromedriver.exe");					     
 		driver = new ChromeDriver();
 		System.out.println("Chrome browser has started");
 		driver.get("https://www.qbe.com/au");	
@@ -60,6 +60,8 @@ public class StepDefinitionExcelData {
 		System.out.println("GreenSlip test works");
 		GreenslipTest.VerifyTextTest();
 		System.out.println("Heading has been Verified");
+		
+		
 	}
 	
 //	@Then("^the user should click on get a greenslip quote for the excel test$")
@@ -125,14 +127,15 @@ public class StepDefinitionExcelData {
 	public void vehicledetailsScreen1(String args1) throws Throwable{
 //		VehicleScreenDetailExcelSheetParamterization VehicleScreenTest = PageFactory.initElements(driver, VehicleScreenDetailExcelSheetParamterization.class);
 //		 VehicleScreenTest.ExcelSheet1();
-		ReadExcelData reader = new ReadExcelData("C:\\Users\\798014\\eclipse-workspace\\GradAssignmentSelenium\\src\\main\\java\\co\\ExcelDataPackage\\SeleniumQBEValues.xlsx");
+//		driver.close();
+		ReadExcelData reader = new ReadExcelData("src\\main\\java\\co\\ExcelDataPackage\\SeleniumQBEValues.xlsx");
 		int rowCount = reader.getRowCount("DataValues");
 	 
 		for (int rowNum = 2;rowNum <= rowCount; rowNum++) {
 //			driver= new ChromeDriver();
 //			driver.get("https://greenslip.qbe.com/CTP_Internet_Quotes/GetQuote?BNDE=xt6lvGSAnWI=#_ga=2.77235158.2123969445.1569196017-1139173979.1567996292");
-			GreenslipQuote GreenslipTest = PageFactory.initElements(driver,GreenslipQuote.class);
-			GreenslipTest.GreenSlipButtonPress();
+			GreenslipQuote GreenslipTest1 = PageFactory.initElements(driver,GreenslipQuote.class);
+			GreenslipTest1.GreenSlipButtonPress();
 			System.out.println("GreenSlip Button test works");	
 		
 			AnoymousQuoteButtonTestDataGrid Quotebutton = PageFactory.initElements(driver,AnoymousQuoteButtonTestDataGrid.class);
@@ -143,24 +146,19 @@ public class StepDefinitionExcelData {
 			System.out.println("Radio Button test works");
 			Quotebutton.TitleTest();
 			System.out.println("The title on this page is correct");
+				
 			
-			
-			
-			
-			
-		 String Year = reader.getCellData("DataValues", "Year", rowNum);
-		 System.out.println(Year);
-		 String Make = reader.getCellData("DataValues", "Make", rowNum);
-		 System.out.println(Make);
-		 String Shape = reader.getCellData("DataValues", "Shape", rowNum);
-		 System.out.println(Shape);
-		 String Usage = reader.getCellData("DataValues", "Usage", rowNum);
-		 System.out.println(Usage);
-		 String postcodeData = reader.getCellData("DataValues", "PostCode", rowNum);
-		 System.out.println(postcodeData);
-		 
-//		 webElement 
-	 
+			 String Year = reader.getCellData("DataValues", "Year", rowNum);
+			 System.out.println(Year);
+			 String Make = reader.getCellData("DataValues", "Make", rowNum);
+			 System.out.println(Make);
+			 String Shape = reader.getCellData("DataValues", "Shape", rowNum);
+			 System.out.println(Shape);
+			 String Usage = reader.getCellData("DataValues", "Usage", rowNum);
+			 System.out.println(Usage);
+			 String postcodeData = reader.getCellData("DataValues", "PostCode", rowNum);
+			 System.out.println(postcodeData);
+//		 webElement
 			WebElement YearElement = driver.findElement(By.cssSelector("#a1"));
 			YearElement.sendKeys(Year);
 			WebElement MakeOfVehicleButton = driver.findElement(By.cssSelector("#a2"));
@@ -191,10 +189,6 @@ public class StepDefinitionExcelData {
 			FinishButtonClick.FinalQuoteCheck();
 			FinishButtonClick.FinishButtonWordpress();
 			System.out.println("This test worked");
-			
-			
-			
-			
 		}
 		
 		System.out.println("Excel Test is complete and has passed all scenrios ");

@@ -15,7 +15,7 @@ import io.cucumber.junit.CucumberOptions;
 		plugin = { "pretty", "html:target/cucumber-html-report"},
 		features ="src\\main\\java\\Features\\DataGrid.feature",
         glue = {"stepDefinitions"},
-        tags = {"@DatagridTest"},
+        tags = {"@FireFoxBrowserDatagridTest"},
         dryRun = false,
 		monochrome = true
         

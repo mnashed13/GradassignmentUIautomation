@@ -68,7 +68,6 @@
    		    	<parallel>classes</parallel>
    				<forkMode>perthread</forkMode>
    				<threadCount>5</threadCount>  
-   	
    				 <argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
    				<includes>	 
    				 <include>**/*Runner.java</include>
